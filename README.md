@@ -4,10 +4,12 @@ Test task
     Backend: .NET 5
 
     Simple form to save first name and last name to json file
-    
+
 Launching:
     Prerequisites:
-        - Node 12
+        - Node 14.15
+        - Npm 6.14
+        - Angular Cli 12.1
 
     Backend: 
         - Open solution under Backend
