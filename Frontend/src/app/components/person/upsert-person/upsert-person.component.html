@@ -1,0 +1,35 @@
+<div class="upsert-person">
+    <h3>Upsert Person</h3>
+    <form>
+        <mat-form-field appearance="standard"> 
+            <mat-label>First Name:</mat-label>
+            <input matInput id="firstName" type="text" [formControl]="firstName" required>
+           
+            <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
+            class="alert alert-danger">
+                <div *ngIf="firstName.errors?.required">
+                    First name is required.
+                </div>
+                <div *ngIf="firstName.errors?.pattern">
+                    First name must be letters only.
+                </div>
+            </div>
+        </mat-form-field>
+        <br/>
+        <mat-form-field appearance="standard">
+            <mat-label>Last Name:</mat-label>
+            <input matInput id="lastName" type="text" [formControl]="lastName" required>
+           
+            <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"
+            class="alert alert-danger">
+                <div *ngIf="lastName.errors?.required">
+                    Last name is required.
+                </div>
+                <div *ngIf="lastName.errors?.pattern">
+                    Last name must be letters only.
+                </div>
+            </div>
+        </mat-form-field>
+    </form>
+    <button [disabled]="!isFormValid()" (click)="upsertPerson()">Upsert Person</button>
+</div>
