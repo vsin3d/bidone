@@ -24,7 +24,9 @@ export class ApiService {
       error: err => {
         alert(`Error during request: ${err.error.text ?? err.error}`);
       }      
-    })
+    }).add(() => {
+      this.loaderService.appLoading(false);
+    });
   }
   
 }
