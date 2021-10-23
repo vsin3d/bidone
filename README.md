@@ -1,11 +1,13 @@
 # bidone
 Test task
+
     Frontend: Angular 12
     Backend: .NET 5
 
-    Simple form to save first name and last name to json file
+Simple form to save first name and last name to json file
 
 Launching:
+
     Prerequisites:
         - Node 14.15
         - Npm 6.14
